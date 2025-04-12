@@ -1,0 +1,172 @@
+/*
+1-) Variables (Değişkenler)      ✅
+2-) Nesting Yazım (İç İçe Yazım) ✅
+3-) Mixin Yapısı                 ✅
+4-) Extend (Miras Alma)          ✅
+5-) Modüler Dosya Yönetimi
+
+
+*/
+
+$fontSize: 65px;
+$button-py: 8px;
+$button-px: 16px;
+$button-radius: 10px;
+$button-transition: 0.5s;
+
+h1 {
+  font-size: $fontSize;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+h2 {
+  font-size: $fontSize;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+h3 {
+  font-size: $fontSize;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+h4 {
+  font-size: $fontSize;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+#detail-btn {
+  border: none;
+  outline: none;
+  padding: $button-py $button-px;
+  font-size: 25px;
+  border-radius: $button-radius;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: all $button-transition ease-in;
+}
+#detail-btn:hover {
+  scale: 0.8;
+}
+
+.search-wrapper {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  padding: 20px 30px;
+  input {
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    flex: 1;
+    border-radius: 10px;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    padding: $button-py $button-px;
+    background-color: orange;
+    font-size: 20px;
+    border-radius: $button-radius;
+    i {
+      font-size: 22px;
+    }
+  }
+}
+
+@mixin styles {
+  padding: 10px 20px;
+  background-color: orangered;
+  display: inline-block;
+  margin: 30px 50px;
+  color: white;
+  font-size: 44px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+span {
+  @include styles;
+}
+
+p {
+  @include styles;
+}
+
+@mixin xxl {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+.container {
+  width: 400px;
+  height: 100px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+
+  @include xl {
+    background-color: pink;
+  }
+  @include lg {
+    background-color: red;
+  }
+}
+
+.parent-container {
+  width: 400px;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  font-size: 55px;
+}
+
+.container-1 {
+  background-color: rebeccapurple;
+  @extend .parent-container;
+}
+
+.container-2 {
+  background-color: aqua;
+  @extend .parent-container;
+}
+
+@import "./footer";
