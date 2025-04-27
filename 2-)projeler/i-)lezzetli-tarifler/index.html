@@ -6,6 +6,14 @@
     <title>Lezzetli Tarifler</title>
     <!-- * Css Link -->
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- * Font Awesome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- * Header -->
@@ -30,6 +38,134 @@
         </ul>
       </nav>
     </header>
+
+    <main>
+      <!-- * Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>En Lezzetli Yemek Tarifleri</h1>
+          <p>Mutfağınıza lezzet katın</p>
+          <button>Tarifleri Keşfet</button>
+        </div>
+      </section>
+
+      <!-- * Recipes -->
+      <section class="recipes">
+        <!-- Title -->
+        <h2>Öne Çıkan Tarifler</h2>
+
+        <!-- Container -->
+        <div class="recipes-grid">
+          <!-- Card -->
+          <div class="recipes-grid-card">
+            <!-- Image -->
+            <img src="./assets/risotto.jpg" alt="" />
+
+            <!-- Content -->
+            <div class="recipe-content">
+              <h3>Mantarlı Risotto</h3>
+              <p>İtalyan mutfağından enfes bir lezzet</p>
+              <span><i class="fa-solid fa-clock"></i> 45 dk</span>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="recipes-grid-card">
+            <!-- Image -->
+            <img src="./assets/pizza.jpg" alt="" />
+
+            <!-- Content -->
+            <div class="recipe-content">
+              <h3>Ev Yapımı Pizza</h3>
+              <p>Klasik İtalyan pizzası</p>
+              <span><i class="fa-solid fa-clock"></i> 60 dk</span>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="recipes-grid-card">
+            <!-- Image -->
+            <img src="./assets/risotto.jpg" alt="" />
+
+            <!-- Content -->
+            <div class="recipe-content">
+              <h3>Çikolatalı Sufle</h3>
+              <p>Akışkan çikolatalı lezzet</p>
+              <span><i class="fa-solid fa-clock"></i> 20 dk</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Menu -->
+      <section class="menu">
+        <!-- Title -->
+        <h2>Günün Menüsü</h2>
+        <!-- Menu Grid -->
+
+        <div class="menu-grid">
+          <!-- Card -->
+          <div class="menu-grid-card">
+            <div class="menu-grid-card-top">
+              <h3>Kahvaltı</h3>
+              <span>75 ₺</span>
+            </div>
+
+            <p>Serpme kahvaltı tabağı, sınırsız çay</p>
+          </div>
+          <!-- Card -->
+          <div class="menu-grid-card">
+            <div class="menu-grid-card-top">
+              <h3>Öğle Menüsü</h3>
+              <span>120 ₺</span>
+            </div>
+
+            <p>Günün çorbası, ana yemek, tatlı</p>
+          </div>
+          <!-- Card -->
+          <div class="menu-grid-card">
+            <div class="menu-grid-card-top">
+              <h3>Akşam Menüsü</h3>
+              <span>150 ₺</span>
+            </div>
+
+            <p>Başlangıç, ana yemek, tatlı, içecek</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Contact -->
+      <section class="contact">
+        <div class="contact-container">
+          <!-- Info -->
+          <div class="info">
+            <h2>İletişim</h2>
+            <p>Bize ulaşın, lezzet yolculuğunuz başlasın!</p>
+            <!-- Info Item -->
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Lezzet Sokak No:123, İstanbul</p>
+            </div>
+            <!-- Info Item -->
+            <div class="info-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>+90 212 345 67 89</p>
+            </div>
+            <!-- Info Item -->
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@lezzetlitarifler.com</p>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="form">
+            <input type="text" placeholder="Adınız" />
+            <input type="email" placeholder="E-posta Adresiniz" />
+            <textarea placeholder="Mesajınız "></textarea>
+            <button type="submit">Gönder</button>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- * Js Bağlantı -->
     <script src="./js/main.js"></script>
   </body>
